@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturalidade</title>França
+    <style>
+        body {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual país você nasceu?</h1>
+    <input type="text" name="país" id="país">
+    <input type="button" value="Procurar" id="procu" onclick="procurar()">
+    <div id="localidade">Natural de:</div>
+    <script>
+        function procurar (){
+            var tpaís = window.document.getElementById('país')
+            var localidade = window.document.getElementById('localidade')
+            var país = String(tpaís.value).toLowerCase()
+
+            localidade.innerHTML = ''
+
+            if (país === '') {
+        localidade.innerHTML = 'Por favor, insira o país de nascimento.';
+    } else if (país === 'brasil') {
+        localidade.innerHTML = `Você é brasileiro por nascer no ${país}`;
+    } else {
+        localidade.innerHTML = `Você é estrangeiro por nascer no ${país}`;
+    }
+        }
+        
+    </script>
+</body>
+</html>
