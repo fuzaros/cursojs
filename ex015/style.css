@@ -4,7 +4,7 @@ body {
 }
 
 header{
-    color: white;
+    color: rgb(162, 4, 224);
     text-align: center;
 
 }
@@ -16,12 +16,26 @@ section{
     width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+    
 
 
 }
-div, #res {
+div {
+    display: grid;
     text-align: center;
     padding: 8px;
+    
+    
+}
+#foto {
+    text-align: center;
+    margin: auto;
+}
+
+div#res { background-color: rgb(255, 255, 255);
+    text-align: center;
+    align-items: center;
+    margin: auto;
 }
 
 footer {
