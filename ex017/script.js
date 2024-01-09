@@ -1,27 +1,25 @@
-function carregar(){
+function tabuada(){
 
-var msg = window.document.getElementById('msg')
-var img = window.document.getElementById('imagem')
-var data = new Date()
-var txtdia = window.document.getElementById('textoDoDia')
-var hora = data.getHours()
+    let num = document.getElementById('txtn')
+    let tab = document.getElementById('seltab')
 
-msg.innerHTML = `Agora são ${hora} horas.`
+    if (num.value.length == 0){
+        window.alert('Por favor, digite um número!')
 
-if (hora >= 0 && hora < 12){
+    }else {
+        
+        let n = Number(num.value)
+        let c = 1
+        tab.innerHTML = ' '
 
-    img.src = 'manha.png'
-    document.body.style.background = '#e2cd9f'
-    txtdia.innerHTML = ('Bom dia')
-} else if (hora >= 12 && hora <= 18) {
-
-    img.src = 'tarde.png'
-    document.body.style.background = '#b9846f'
-    txtdia.innerHTML = ('Boa tarde')
-} else {
-    img.src = 'noite.png'
-    document.body.style.background = '#515154'
-    txtdia.innerHTML = ('Boa noite')
-}
-}
+        while (c <= 10){
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c}`
+            item.value = `tab${c}` //precisaria para outras linguagen tipo php para dar o valor de cada linha da tabuada.
+            tab.appendChild(item)
+            c++
+            
+        }
+    } 
+} 
 

@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exerciio</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="carregar()">
+<body>
     <header>
-        <h1 id="textoDoDia">Horario do Dia</h1>
+        <h1 id="txth1">Tabuada</h1>
     </header>
     <section>
-        <div id="msg">
-            Aqui vai aparecer a mensagem...
+        <div id="numero">
+        <p>Número: <input type="number" name="num" min="1" max="10" id="txtn"> <input type="button" value="Gerar Tabuada" onclick="tabuada()"> </p>
         </div>
-        <div id="foto">
-            <img id="imagem" src="manha.png" alt="foto-pela-manha">
-
-            
+        <div>
+        <select name="Tabuada" id="seltab" size="10">
+        <option>Digite um número acima</option>
+        </select>
+        
         </div>
     </section>
     <footer>
-        <p>&copy; só os fortes.</p>
+        <p>&copy; WallysonDev.</p>
     </footer>
     <script src="script.js"></script>
 </body>
