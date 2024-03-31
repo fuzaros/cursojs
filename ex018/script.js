@@ -25,6 +25,7 @@ function adicionar(){
         let item = document.createElement('option') //fazer o criador
         item.text = `Valor ${num.value} adicionado` //fazer o criador
         list.appendChild(item) // fazer o criador mostrar no 'option'
+        res.innerHTML = ''
     }else{
         window.alert('Valor invalido ou ja encontrado na lista.')
         
@@ -37,8 +38,26 @@ function finalizar(){
         window.alert('Adicione valores antes de finalizar')
     }else {
         let total = valores.length
+        let maior = valores[0]
+        let menor = valores[0]
+        let soma = 0
+        let media = 0
+
+        for(let pos in valores){
+            soma += valores[pos]
+
+            if(valores[pos] > maior)
+                maior = valores[pos]
+            if(valores[pos] < menor)
+            menor = valores[pos]
+        }
+        media = (soma / total).toFixed(2)
         
         res.innerHTML = ''
         res.innerHTML += `<p> Ao todo, temos ${total} números cadastrado</p>`
+        res.innerHTML += `<p> O maior valor é ${maior} dos números cadastrado</p>`
+        res.innerHTML += `<p> O menor valor é ${menor} dos números cadastrado</p>`
+        res.innerHTML +=`<p>Somando todos os valores, temos ${soma} </p>`
+        res.innerHTML += `<p>A média dos valores digitados é ${media} </p>`
     }
 }
